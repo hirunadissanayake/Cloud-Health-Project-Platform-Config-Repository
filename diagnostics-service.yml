@@ -1,6 +1,7 @@
 spring:
   mongodb:
     uri: ${DIAGNOSTICS_MONGODB_URI}
+    database: healthcare_diagnostics
   data:
     mongodb:
       auto-index-creation: true
@@ -12,4 +13,3 @@ server:
   shutdown: graceful
 
 spring.lifecycle.timeout-per-shutdown-phase: 20s
-
