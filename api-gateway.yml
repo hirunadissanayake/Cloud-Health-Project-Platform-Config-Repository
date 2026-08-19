@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: patient-service-patients
+              uri: lb://patient-service
+              predicates:
+                - Path=/api/patients/**
+            - id: patient-service-appointments
+              uri: lb://patient-service
+              predicates:
+                - Path=/api/appointments/**
+            - id: diagnostics-service
+              uri: lb://diagnostics-service
+              predicates:
+                - Path=/api/records/**,/api/diagnostics/**
+            - id: file-service
+              uri: lb://file-service
+              predicates:
+                - Path=/api/files/**
+
+management:
+  endpoint:
+    gateway:
+      access: read-only
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway

@@ -1,0 +1,31 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: ${FILE_MAX_SIZE:25MB}
+      max-request-size: ${FILE_MAX_SIZE:25MB}
+  mvc:
+    problemdetails:
+      enabled: true
+
+healthcare:
+  files:
+    project-id: ${GCP_PROJECT_ID}
+    bucket-name: ${MEDICAL_FILES_BUCKET}
+    firestore-database: ${FIRESTORE_DATABASE:(default)}
+    metadata-collection: ${FILE_METADATA_COLLECTION:medical_files}
+    signing-service-account: ${SIGNED_URL_SERVICE_ACCOUNT:}
+    signed-url-minutes: ${SIGNED_URL_MINUTES:15}
+    max-size-bytes: ${FILE_MAX_SIZE_BYTES:26214400}
+    allowed-content-types:
+      - application/pdf
+      - application/dicom
+      - image/dicom
+      - image/jpeg
+      - image/png
+      - image/webp
+
+server:
+  shutdown: graceful
+
+spring.lifecycle.timeout-per-shutdown-phase: 20s
+

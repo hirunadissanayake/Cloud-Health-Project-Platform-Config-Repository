@@ -1,0 +1,15 @@
+spring:
+  mongodb:
+    uri: ${DIAGNOSTICS_MONGODB_URI}
+  data:
+    mongodb:
+      auto-index-creation: true
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  shutdown: graceful
+
+spring.lifecycle.timeout-per-shutdown-phase: 20s
+
