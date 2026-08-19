@@ -60,5 +60,5 @@ http://localhost:8888/patient-service/default
 | Property | Value |
 |---|---|
 | Student | Hiruna Dissanayake |
-| Student number | `TODO` |
+| Student number | `24171104` |
 | GCP project | `cloud-health-506015-hiruna` |
