@@ -20,7 +20,7 @@ This repository is part of the Cloud Health Project for ITS 2130 Enterprise Clou
 | File | Purpose |
 |---|---|
 | `application.yml` | Shared Eureka, Actuator, liveness, and readiness settings |
-| `discovery-server.yml` | Eureka Server behavior |
+| `service-registry.yml` | Peer-aware Eureka Server behavior and self-registration |
 | `api-gateway.yml` | Routes for the three domain services |
 | `patient-service.yml` | PostgreSQL, JPA, Flyway, and graceful shutdown |
 | `diagnostics-service.yml` | MongoDB, automatic indexes, and graceful shutdown |

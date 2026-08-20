@@ -1,7 +1,7 @@
 eureka:
   client:
-    register-with-eureka: ${EUREKA_REGISTER_WITH_EUREKA:false}
-    fetch-registry: ${EUREKA_FETCH_REGISTRY:false}
+    register-with-eureka: ${EUREKA_REGISTER_WITH_EUREKA:true}
+    fetch-registry: ${EUREKA_FETCH_REGISTRY:true}
   server:
     enable-self-preservation: true
     eviction-interval-timer-in-ms: 60000
